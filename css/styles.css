@@ -186,3 +186,33 @@ nav button {
 .main input[type="email"]:invalid {
     border-color: red;
 }
+
+.first {
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    max-width: 70vw;
+    margin: auto;
+    position: relative;
+    /* text-align: center; */
+   
+}
+
+.secimg img {
+    width: 30vw;
+    margin-top: 1vw;
+}
+
+.secimg video {
+    width: 23.5vw;
+    position: absolute;
+    right: 40px;
+    top: 4.8vw;
+    z-index: -1;
+}
+
+.first .first-span {
+    font-size: 48px;
+    font-weight: 900;
+}
