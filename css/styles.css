@@ -17,7 +17,7 @@ body {
 
 .main {
     /* background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100%); */
-    background-image: url(..//assets/images/backgroundimage.jpg);
+    background-image: url(/images/backgroundimage.jpg);
     height: 95vh;
     /* width: 100%; */
     background-position: center center;
