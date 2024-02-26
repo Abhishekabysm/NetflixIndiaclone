@@ -189,7 +189,7 @@ nav button {
 
 .first,
 .second,
-.third {
+.third, .fourth {
     display: flex;
     color: white;
     justify-content: center;
@@ -219,7 +219,7 @@ nav button {
 
 .secchild-1,
 .secchild-2,
-.secchild-3 {
+.secchild-3, .secchild-4 {
     display: flex;
     align-items: baseline;
     justify-content: center;
@@ -239,7 +239,7 @@ nav button {
     font-weight: 400;
 }
 
-.sepration-2, .sepration-3 {
+.sepration-2, .sepration-3, .sepration-4{
     width: 100%;
     height: 0.5rem;
     position: absolute;
@@ -248,7 +248,7 @@ nav button {
     position: relative;
 }
 
-.second {
+.second, .fourth {
     margin-top: 10px;
     display: flex;
     flex-direction: row-reverse;
@@ -323,4 +323,44 @@ nav button {
     height: 26vw;
     left: 36vw;
 
+}
+
+.secimg-4 img {
+    width: 34vw;
+    margin-top: 1vw;
+    position: relative;
+    left: -5vw;
+    /* top: 5vw; */
+    bottom: 1vw;
+    width: 39vw;
+}
+
+.secimg-4 img {
+    margin-right: 1vw;
+}    
+
+.fourth {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row-reverse;
+    /* margin: 1vw; */
+    margin-left: 20vw;
+}
+
+/* .secchild-4 {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+    left: -5vw;
+} */
+
+.secchild-4 span {
+    width: 37vw;
+}
+
+.secchild-4 :nth-child(2) {
+    line-height: 1.1em;
 }
