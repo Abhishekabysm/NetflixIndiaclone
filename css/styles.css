@@ -1,139 +1,390 @@
-/* Reset and base styles */
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
 * {
-    margin: 0;
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
     background-color: black;
-    color: white;
-    line-height: 1.5;
 }
 
-/* Responsive container */
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+.main {
+    background-image: url(/images/backgroundimage.jpg);
+    height: auto;
+    min-height: 100vh;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
 }
 
-/* Navigation */
+.main .box {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    top: 0;
+}
+
 nav {
     display: flex;
+    max-width: 100%;
+    margin: auto;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 0;
+    padding: 1rem;
+    position: relative;
 }
 
-nav img {
+nav span img {
     width: 100px;
     height: auto;
+    position: relative;
+    z-index: 1;
 }
 
-/* Buttons */
-.btn {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+nav button {
+    position: relative;
+    z-index: 1;
 }
 
-.btn-red {
-    background-color: #e50914;
-    color: white;
-}
-
-/* Hero section */
 .hero {
-    text-align: center;
-    padding: 50px 0;
-}
-
-.hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
-
-.hero p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-}
-
-/* Form */
-.email-form {
+    height: 100%;
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
-    gap: 10px;
-    max-width: 500px;
-    margin: 0 auto;
+    color: white;
+    position: relative;
+    font-family: "Martel Sans", sans-serif;
+    gap: 1rem;
+    padding: 2rem 1rem;
+    text-align: center;
 }
 
-.email-form input {
-    padding: 15px;
+.hero > :first-child {
+    font-weight: 900;
+    font-size: 2rem;
+}
+
+.hero > :nth-child(2) {
+    font-weight: 400;
     font-size: 1rem;
 }
 
-/* Content sections */
-.content-section {
-    padding: 50px 0;
-    border-top: 8px solid #222;
+.hero :nth-child(3) {
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5;
 }
 
-.content-section h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
+.sepration {
+    width: 100%;
+    height: 0.5rem;
+    position: absolute;
+    bottom: -0.5rem;
+    background-color: rgb(35, 35, 35);
 }
 
-.content-section img, .content-section video {
-    max-width: 100%;
-    height: auto;
-}
-
-/* FAQ section */
-.faq-section {
-    padding: 50px 0;
-}
-
-.faq-item {
-    background-color: #303030;
-    margin-bottom: 10px;
-}
-
-.faq-question {
-    padding: 20px;
+.btn {
     cursor: pointer;
+    padding: 0.5rem 1rem;
+    background-color: rgba(246, 238, 238, 0.055);
+    color: white;
+    border: 1px solid white;
+    border-radius: 4px;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    margin-right: 1rem;
 }
 
-/* Responsive adjustments */
+.btn-red {
+    background-color: red;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    font-weight: bold;
+    border: none;
+    transition: 0.5s ease-in-out;
+}
+
+.btn-red-sin {
+    background-color: red;
+    color: white;
+    border: none;
+    transition: 0.5s ease-in-out;
+}
+
+.btn-red:hover, .btn-red-sin:hover {
+    background-color: rgba(255, 0, 0, 0.692);
+}
+
+input {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    background-color: transparent;
+    font-weight: 400;
+    border: 1px solid rgba(246, 238, 238, 0.5);
+    color: white;
+}
+
+.insert {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-direction: column;
+    width: 100%;
+}
+
+input[type="email"] {
+    border-color: white;
+    width: 100%;
+}
+
+input[type="email"]:valid {
+    border-color: green;
+}
+
+input[type="email"]:invalid {
+    border-color: red;
+}
+
+.first, .second, .third, .fourth {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    max-width: 90vw;
+    margin: auto;
+    position: relative;
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.secimg img, .secimg-2 img, .secimg-4 img {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 1rem;
+}
+
+.secimg video, .secimg-3 video {
+    width: 100%;
+    max-width: 400px;
+    position: static;
+}
+
+.secchild-1, .secchild-2, .secchild-3, .secchild-4 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.first-span {
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+.second-span {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.sepration-2, .sepration-3, .sepration-4, .sepration-5 {
+    width: 100%;
+    height: 0.5rem;
+    background-color: rgb(35, 35, 35);
+    position: relative;
+}
+
+.card {
+    border: 2px solid grey;
+    width: 80%;
+    max-width: 300px;
+    height: auto;
+    background-color: black;
+    border-radius: 13px;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+.card img {
+    height: auto;
+    max-width: 100%;
+}
+
+.downloading {
+    color: blue;
+}
+
+.stranger {
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+.stranger :nth-child(1) {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.stranger :nth-child(2) {
+    font-size: 0.875rem;
+    font-weight: 400;
+}
+
+.down {
+    width: 3rem;
+    height: 3rem;
+    background: url(https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/download-icon.gif);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 1rem auto;
+}
+
+.fifth h2 {
+    font-weight: 900;
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.master {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: rgb(45, 45, 45);
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.master:hover {
+    background-color: rgb(67, 66, 66);
+}
+
+.masterchild h3 {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.fifthlast {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.fifthlast h3 {
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+/* Media Queries */
 @media (min-width: 768px) {
-    .hero h1 {
-        font-size: 3.5rem;
+    .hero > :first-child {
+        font-size: 3rem;
     }
 
-    .hero p {
+    .hero > :nth-child(2),
+    .hero > :nth-child(3) {
         font-size: 1.5rem;
     }
 
-    .email-form {
+    .insert {
         flex-direction: row;
     }
 
-    .content-section {
-        display: flex;
-        align-items: center;
-        gap: 40px;
+    input, .btn-red {
+        width: auto;
     }
 
-    .content-section:nth-child(even) {
+    .first, .second, .third, .fourth {
+        flex-direction: row;
+        text-align: left;
+        align-items: center;
+    }
+
+    .second, .fourth {
         flex-direction: row-reverse;
+    }
+
+    .secimg img, .secimg-2 img, .secimg-4 img {
+        width: 40vw;
+    }
+
+    .first-span {
+        font-size: 2.5rem;
+    }
+
+    .second-span {
+        font-size: 1.25rem;
+    }
+
+    .masterchild h3 {
+        font-size: 1.2rem;
+    }
+
+    .card {
+        width: 60%;
     }
 }
 
 @media (min-width: 1024px) {
-    .hero h1 {
+    nav span img {
+        width: 148px;
+    }
+
+    .hero > :first-child {
         font-size: 4rem;
+    }
+
+    .first-span {
+        font-size: 3rem;
+    }
+
+    .second-span {
+        font-size: 1.5rem;
+    }
+
+    .masterchild h3 {
+        font-size: 1.4rem;
+    }
+
+    .card {
+        width: 300px;
+    }
+
+    .secimg video, .secimg-3 video {
+        position: absolute;
+    }
+
+    .secimg video {
+        width: 23.5vw;
+        right: 39px;
+        top: 10.8vw;
+    }
+
+    .secimg-3 video {
+        width: 26.5vw;
+        right: 5vw;
+        top: 4.1vw;
+        height: 26vw;
+        left: 36vw;
     }
 }
