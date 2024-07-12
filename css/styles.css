@@ -13,39 +13,50 @@
 
 body {
     background-color: black;
-    font-size: 16px;
 }
 
 .main {
+    /* background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100%); */
     background-image: url(/images/backgroundimage.jpg);
-    min-height: 100vh;
+    height: 95vh;
+    /* width: 100%; */
     background-position: center center;
     background-repeat: no-repeat;
-    background-size: cover;
+    /* background-size: max(1200px, 100vw); */
+
+    object-fit: cover;
     position: relative;
 }
 
 .main .box {
-    height: 100%;
+    height: 95vh;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
+    /* opacity: 1; */
+    background-color: rgb(0 0 0 / 40%);
     position: absolute;
     top: 0;
 }
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-    position: relative;
-}
-
 nav span img {
-    width: 100px;
-    height: auto;
+    /* width: 115px;
+    position: relative;
+    z-index: 1; */
+    width: 148px;
     position: relative;
     z-index: 1;
+    height: 40px;
+}
+
+nav {
+    display: flex;
+    max-width: calc(83.3333% - 6rem);
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+    height: 62px;
+    padding: 24px 32px;
+    position: relative;
+    top: 10px;
 }
 
 nav button {
@@ -62,20 +73,28 @@ nav button {
     color: white;
     position: relative;
     font-family: "Martel Sans", sans-serif;
-    gap: 1rem;
-    padding: 2rem 1rem;
+    font-weight: 600;
+    font-style: normal;
+    gap: 12px;
+    padding: 30px;
     text-align: center;
 }
 
-.hero > :first-child {
+.hero> :first-child {
     font-weight: 900;
-    font-size: 2rem;
+    font-size: 48px;
 }
 
-.hero > :nth-child(2),
-.hero > :nth-child(3) {
+.hero> :nth-child(2) {
     font-weight: 400;
-    font-size: 1rem;
+    font-size: 24px;
+}
+
+.hero :nth-child(3) {
+    font-weight: 400;
+    font-size: 20px;
+    /* line-height: 3.5; */
+    line-height: 2;
 }
 
 .sepration {
@@ -88,44 +107,60 @@ nav button {
 
 .btn {
     cursor: pointer;
-    padding: 0.5rem 1rem;
+    padding: 3px 8px;
     background-color: rgba(246, 238, 238, 0.055);
+    /* border: 0px solid transparent; */
     color: white;
+    /* font-weight: 400; */
     border: 1px solid white;
     border-radius: 4px;
     font-family: "Ubuntu", sans-serif;
     font-weight: 400;
-    font-size: 1rem;
-    margin-right: 1rem;
+    font-style: normal;
+    margin-right: 20px;
+    font-size: 17px;
+    padding: 5px 12px;
+
 }
 
 .btn-red {
     background-color: red;
     color: white;
-    padding: 0.75rem 1.5rem;
-    font-size: 1rem;
+    padding: 12px 26px;
+    font-size: 20px;
     border-radius: 4px;
     font-weight: bold;
     border: none;
+    height: 54px;
     transition: 0.5s ease-in-out;
-    width: 100%;
-    max-width: 200px;
 }
+
+
 
 .btn-red-sin {
     background-color: red;
     color: white;
     border: none;
     transition: 0.5s ease-in-out;
+
+    /* transition: 1s ease-in-out; */
+    /* font-size: 20px; */
 }
 
-.btn-red:hover, .btn-red-sin:hover {
+.btn-red:hover {
     background-color: rgba(255, 0, 0, 0.692);
 }
 
+.btn-red-sin:hover {
+    background-color: rgba(255, 0, 0, 0.692);
+}
+
+
+
 input {
-    padding: 0.75rem 1.5rem;
-    font-size: 1rem;
+    padding: 12px 26px;
+    /* font-size: 20px; */
+    font-size: 18px;
     border-radius: 4px;
     background-color: transparent;
     font-weight: 400;
@@ -137,16 +172,11 @@ input {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
-    flex-direction: column;
-    width: 100%;
-    margin-top: 1rem;
+    gap: 16px;
 }
 
 input[type="email"] {
     border-color: white;
-    width: 100%;
-    max-width: 500px;
 }
 
 input[type="email"]:valid {
@@ -157,72 +187,99 @@ input[type="email"]:invalid {
     border-color: red;
 }
 
-.first, .second, .third, .fourth {
+.first,
+.second,
+.third, .fourth {
     display: flex;
-    flex-direction: column;
     color: white;
     justify-content: center;
     align-items: center;
-    max-width: 90vw;
+    max-width: 70vw;
     margin: auto;
     position: relative;
-    padding: 3rem 0;
-    text-align: center;
+    padding-top: 6vw;
+    padding-bottom: 6vw;
+    /* padding important hai bhai */
+    /* text-align: center; */
+
 }
 
-.secimg img, .secimg-2 img, .secimg-4 img {
-    width: 100%;
-    max-width: 600px;
-    margin-top: 1rem;
+.secimg img {
+    width: 30vw;
+    margin-top: 1vw;
 }
 
-.secimg video, .secimg-3 video {
-    width: 100%;
-    max-width: 400px;
-    position: static;
-    margin-top: 1rem;
+.secimg video {
+    width: 23.5vw;
+    position: absolute;
+    right: 39px;
+    top: 10.8vw;
+    z-index: -1;
 }
 
-.secchild-1, .secchild-2, .secchild-3, .secchild-4 {
+.secchild-1,
+.secchild-2,
+.secchild-3, .secchild-4 {
     display: flex;
-    align-items: center;
+    align-items: baseline;
     justify-content: center;
     flex-direction: column;
-    gap: 1rem;
+    gap: 10px;
+    position: relative;
+    left: -5vw;
 }
 
 .first-span {
-    font-size: 2rem;
+    font-size: 48px;
     font-weight: 900;
 }
 
 .second-span {
-    font-size: 1rem;
+    font-size: 24px;
     font-weight: 400;
-    margin-top: 1rem;
 }
 
-.sepration-2, .sepration-3, .sepration-4, .sepration-5 {
+.sepration-2, .sepration-3, .sepration-4, .sepration-5{
     width: 100%;
     height: 0.5rem;
+    position: absolute;
+    bottom: -0.5rem;
     background-color: rgb(35, 35, 35);
     position: relative;
 }
 
+.second, .fourth {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row-reverse;
+
+
+}
+
+.secimg-2 img {
+    width: 34vw;
+    margin-top: 1vw;
+    position: relative;
+    left: -5vw;
+    /* top: 5vw; */
+    bottom: 1vw;
+
+}
+
 .card {
     border: 2px solid grey;
-    width: 90%;
-    max-width: 300px;
-    height: auto;
+    width: 300px;
+    height: 110px;
+    position: absolute;
+    right: 48vw;
+    top: 22.35vw;
     background-color: black;
     border-radius: 13px;
-    margin: 2rem auto;
-    padding: 1rem;
 }
 
 .card img {
-    height: auto;
-    max-width: 100%;
+    height: 7vw;
+    padding: 7px;
 }
 
 .downloading {
@@ -230,191 +287,152 @@ input[type="email"]:invalid {
 }
 
 .stranger {
+    position: relative;
+    top: -5.4vw;
     text-align: center;
     font-size: 1rem;
-    margin-top: 1rem;
 }
 
 .stranger :nth-child(1) {
-    font-size: 1rem;
+    font-size: 1vw;
     font-weight: 500;
 }
 
 .stranger :nth-child(2) {
-    font-size: 0.875rem;
+    font-size: 14px;
     font-weight: 400;
 }
 
 .down {
-    width: 3rem;
-    height: 3rem;
+    width: 100%;
+    height: 9vh;
     background: url(https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/download-icon.gif);
     background-size: contain;
     background-repeat: no-repeat;
-    margin: 1rem auto;
+    position: relative;
+    bottom: 9.3vw;
+    left: 14.5vw;
 }
 
-.fifth h2 {
+.secimg-3 video {
+    width: 26.5vw;
+    position: absolute;
+    right: 5vw;
+    top: 4.1vw;
+    z-index: -1;
+    height: 26vw;
+    left: 36vw;
+
+}
+
+.secimg-4 img {
+    width: 34vw;
+    margin-top: 1vw;
+    position: relative;
+    left: -5vw;
+    /* top: 5vw; */
+    bottom: 1vw;
+    width: 39vw;
+}
+
+.secimg-4 img {
+    margin-right: 1vw;
+}    
+
+.fourth {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row-reverse;
+    /* margin: 1vw; */
+    margin-left: 20vw;
+}
+
+/* .secchild-4 {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+    left: -5vw;
+} */
+
+.secchild-4 span {
+    width: 37vw;
+}
+
+.secchild-4 :nth-child(2) {
+    line-height: 1.1em;
+}
+
+.fifth h2{
     font-weight: 900;
-    font-size: 2rem;
+    font-size: 48px;
     color: white;
     text-align: center;
-    margin-bottom: 2rem;
+}
+
+li .master {
+    /* padding: 0.1rem; */
+    margin: 1rem;
+}
+
+.master .masterchild {
+    display: inline-block;
+    font-weight: 400;
+    font-size: 24px;
+    margin: 2rem;
+    /* text-align: left; */
+    position: relative;
+    left: -2rem;
+}
+
+.fifth {
+    display: block;
+    max-width: 80%;
+    margin: auto;
 }
 
 .master {
     display: flex;
+    display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem;
-    background-color: rgb(45, 45, 45);
-    margin-bottom: 0.5rem;
-    cursor: pointer;
-    transition: 0.3s ease-in-out;
 }
 
-.master:hover {
-    background-color: rgb(67, 66, 66);
+ul li {
+    list-style: none;
+    /* margin: 0.1rem; */
+    background-color: rgb(45, 45, 45);
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+ul li:hover {
+    background-color:  rgb(67, 66, 66);
+}
+
+.masterchild {
+    position: relative;
+    left: -2rem;
+    font-size: 1.5rem;
+    font-weight: 400;
 }
 
 .masterchild h3 {
-    font-size: 1rem;
+    font-size: 1.4rem;
     font-weight: 400;
 }
 
 .fifthlast {
     text-align: center;
-    margin-top: 2rem;
 }
 
 .fifthlast h3 {
     font-size: 1.25rem;
     font-weight: 400;
+    line-height: 4.5;
     color: white;
-    margin-bottom: 1rem;
-}
-
-/* Tablet styles */
-@media (min-width: 768px) {
-    .hero > :first-child {
-        font-size: 3rem;
-    }
-
-    .hero > :nth-child(2),
-    .hero > :nth-child(3) {
-        font-size: 1.25rem;
-    }
-
-    .insert {
-        flex-direction: row;
-        justify-content: center;
-    }
-
-    input[type="email"] {
-        width: 60%;
-    }
-
-    .btn-red {
-        width: auto;
-    }
-
-    .first, .second, .third, .fourth {
-        flex-direction: row;
-        text-align: left;
-        align-items: center;
-    }
-
-    .second, .fourth {
-        flex-direction: row-reverse;
-    }
-
-    .secimg img, .secimg-2 img, .secimg-4 img,
-    .secimg video, .secimg-3 video {
-        width: 50%;
-        margin-top: 0;
-    }
-
-    .first-span {
-        font-size: 2.5rem;
-    }
-
-    .second-span {
-        font-size: 1.25rem;
-    }
-
-    .masterchild h3 {
-        font-size: 1.2rem;
-    }
-
-    .card {
-        width: 60%;
-    }
-}
-
-/* Desktop styles */
-@media (min-width: 1024px) {
-    nav span img {
-        width: 148px;
-    }
-
-    .hero > :first-child {
-        font-size: 4rem;
-    }
-
-    .hero > :nth-child(2),
-    .hero > :nth-child(3) {
-        font-size: 1.5rem;
-    }
-
-    .first-span {
-        font-size: 3rem;
-    }
-
-    .second-span {
-        font-size: 1.5rem;
-    }
-
-    .masterchild h3 {
-        font-size: 1.4rem;
-    }
-
-    .card {
-        width: 300px;
-    }
-
-    .secimg video, .secimg-3 video {
-        position: absolute;
-    }
-
-    .secimg video {
-        width: 23.5vw;
-        right: 39px;
-        top: 10.8vw;
-    }
-
-    .secimg-3 video {
-        width: 26.5vw;
-        height: 26vw;
-        left: 36vw;
-        top: 4.1vw;
-    }
-}
-
-/* Large desktop styles */
-@media (min-width: 1440px) {
-    body {
-        font-size: 18px;
-    }
-
-    .hero > :first-child {
-        font-size: 5rem;
-    }
-
-    .first-span {
-        font-size: 3.5rem;
-    }
-
-    .second-span {
-        font-size: 1.75rem;
-    }
+    position: relative;
+    top: 1rem;
 }
